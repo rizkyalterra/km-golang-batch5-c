@@ -1,3 +1,8 @@
 Ada perubahan dari remoted branch
 Ini dari developer B
 Ini Conflict dari Developer A
+- perubahan a
+- perubahan b
+- perubahan c
+- perubahan d
+- perubahan e
