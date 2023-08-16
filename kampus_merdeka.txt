@@ -1,3 +1,4 @@
+Ini dari branch FEATUREA
 Ada perubahan dari remoted branch
 Ini dari developer B
 Ini Conflict dari Developer A
