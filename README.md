@@ -1,1 +1,0 @@
-# km-golang-batch5-c
