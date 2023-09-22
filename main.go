@@ -13,5 +13,6 @@ func main(){
 	e := echo.New()
 	e.GET("/news", controllers.GetNewsController)
 	e.POST("/news", controllers.AddNewsController)
+	e.DELETE("/news/:id", controllers.DeleteNewsController)
 	e.Start(":8000")
 }

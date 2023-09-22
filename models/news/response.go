@@ -19,3 +19,19 @@ func (newsResponse *NewsResponse) MapFromDatabase(news News) {
 	newsResponse.Author = news.Author
 	newsResponse.Content = news.Content
 }
+
+
+func MapFromDatabaseList(listNewsDB []News) []NewsResponse {
+	var result []NewsResponse
+	var newsResponse NewsResponse
+	for _, news := range listNewsDB {
+		newsResponse.ID = news.ID
+		newsResponse.CreatedAt = news.CreatedAt
+		newsResponse.UpdatedAt = news.UpdatedAt
+		newsResponse.Title = news.Title
+		newsResponse.Author = news.Author
+		newsResponse.Content = news.Content
+		result = append(result, newsResponse)
+	}
+	return result
+}
