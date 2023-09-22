@@ -12,5 +12,6 @@ func main(){
 	configs.InitDatabase()
 	e := echo.New()
 	e.GET("/news", controllers.GetNewsController)
+	e.POST("/news", controllers.AddNewsController)
 	e.Start(":8000")
 }
