@@ -19,11 +19,11 @@ func init() {
 }
 
 func InitDB() {
-	username := ""
-	password := ""
-	host := ""
+	username := "root"
+	password := "123ABC4d."
+	host := "127.0.0.1"
 	port := "3306"
-	name := ""
+	name := "km5"
 
 	connectionString := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?parseTime=true",
 		username,
@@ -37,6 +37,7 @@ func InitDB() {
 	if err != nil {
 		log.Fatalf("Failed to connect to database: %s", err.Error())
 	}
+	InitialMigration()
 }
 
 func InitialMigration() {
