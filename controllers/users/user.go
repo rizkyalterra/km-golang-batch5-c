@@ -20,7 +20,9 @@ func NewUserController(userUsecase entities.UsecaseInterface) *UserController {
 func (uc *UserController) Register(c echo.Context) error {
 	var register request.Register
 	c.Bind(&register)
+	
 	data, err := uc.userUsecase.Register(register.ToEntities())
+	
 	if err != nil {
 		return controllers.NewErrorResponse(c, err)
 	}

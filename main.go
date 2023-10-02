@@ -15,10 +15,9 @@ func main() {
 	configs.LoadEnv()
 	db := mysql.InitDB(configs.InitConfigDB())
 	e := echo.New()
-
 	
-	userRepoInterface := userRepo.NewUserRepository(db)
-	userUsecase := usecases.NewUserUsecase(userRepoInterface)
+	userRepo := userRepo.NewUserRepository(db)
+	userUsecase := usecases.NewUserUsecase(userRepo)
 	userController := users.NewUserController(userUsecase)
 
 	var listController = routes.ListController {
