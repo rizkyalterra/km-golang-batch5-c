@@ -23,3 +23,17 @@ func TestGetBooks(t *testing.T){
 	assert.NoError(t, err) 
 	assert.Equal(t, http.StatusOK, rec.Code)
 }
+
+// create create book controller
+func TestCreateBook(t *testing.T){
+    config.InitDB()
+    e := echo.New()
+    req := httptest.NewRequest(http.MethodPost, "/books", nil)
+    rec := httptest.NewRecorder()
+    c := e.NewContext(req, rec)
+
+    err := CreateBookController(c)
+
+    assert.NoError(t, err) 
+    assert.Equal(t, http.StatusOK, rec.Code)
+}

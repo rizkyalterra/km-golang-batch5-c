@@ -19,7 +19,7 @@ func init() {
 }
 
 func InitDB() {
-	username := "root"
+	username := "s"
 	password := "123ABC4d."
 	host := "127.0.0.1"
 	port := "3306"
